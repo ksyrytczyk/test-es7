@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>executor.js</title>
+    <meta charset="utf-8"/>
+    <script src="executor.js"></script>
+</head>
+<body>
+
+<pre class="executor-code" data-font-size="16">
+let { a, b, ...rest } = { a: 1, b: 2, c: 3, d: { e: NaN } };
+
+console.log(`a is ${a}`);
+console.log(`b is ${b}`);
+console.log(`rest is `, rest);
+console.log(`rest.d.e is ${rest.d.e}`);
+</pre>
+
+</body>
+</html>

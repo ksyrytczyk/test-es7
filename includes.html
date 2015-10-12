@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>executor.js</title>
+    <meta charset="utf-8"/>
+    <script src="executor.js"></script>
+</head>
+<body>
+
+<pre class="executor-code" data-font-size="16">
+let stack, needle;
+
+stack = [1, 2, 3]; needle = 2;
+console.log('2 in [1, 2, 3] ', stack.includes(needle));
+
+stack = [1, 2, NaN]; needle = NaN;
+console.log('NaN in [1, 2, NaN] ', stack.includes(needle));
+
+stack = [1, 2, -0]; needle = +0;
+console.log('+0 in [1, 2, -0] ', stack.includes(needle));
+
+stack = [1, [2, 3, 4], 5]; needle = 2;
+console.log('2 in [1, [2, 3, 4], 5] ', stack.includes(needle));
+
+stack = [1, [2, 3, 4], 5]; needle = [2, 3, 4];
+console.log('[2, 3, 4] in [1, [2, 3, 4], 5] ', stack.includes(needle));
+
+stack = ['a', 'b', 'c']; needle = 'c';
+console.log(`c in [a, b, c] from 1 position`, stack.includes(needle, 1));
+</pre>
+
+</body>
+</html>

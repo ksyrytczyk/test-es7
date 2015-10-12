@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>executor.js</title>
+    <meta charset="utf-8"/>
+    <script src="executor.js"></script>
+</head>
+<body>
+
+<pre class="executor-code" data-font-size="16">
+let a, b
+
+a = 2; b = 8;
+console.log('2 ** 8 is ', a ** b);
+console.log('Math.pow(2, 8) is ', Math.pow(a, b));
+
+a = 2; b = 16;
+console.log('2 ** 16 is', a **= b);
+
+a = Infinity; b = -1;
+console.log('Infinity ** -1 is', a ** b);
+
+a = NaN; b = 0;
+console.log('NaN ** 0 is', a ** b);
+
+a = 0; b = Infinity;
+console.log(a ** b);
+
+a = 2; b = 1024;
+console.log('2 ** 1024 is ', a ** b);
+console.log(Math.pow(a, b)); // ES5: infinity
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>executor.js</title>
+    <meta charset="utf-8"/>
+    <script src="executor.js"></script>
+</head>
+<body>
+
+<pre class="executor-code" data-font-size="16">
+let a, b, c, d, str = 'X';
+
+a = str.padLeft(10);
+console.log(a, a.length);
+
+b = str.padRight(10, '*');
+console.log(b, b.length);
+
+c = str.padLeft(5, '_');
+console.log(c, c.length);
+
+d = str.padLeft(5).padRight(10);
+console.log(c, c.length); // Chaining not working :(
+</pre>
+
+</body>
+</html>

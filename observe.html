@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>executor.js</title>
+    <meta charset="utf-8"/>
+    <script src="executor.js"></script>
+</head>
+<body>
+
+<pre class="executor-code" data-font-size="16">
+let obj = { a: 1, b: { c: 'Lorem', d: 'Ipsum' } };
+let sleep = (t = 1000) => setTimeout(() => {}, t);
+
+Object.observe(obj, (changes) => {
+ 	console.log(changes);
+});
+
+obj.prop1 = 8; // add
+sleep();
+obj.a = 12; // update
+sleep();
+delete obj.b.c; // delete
+sleep();
+Object.defineProperty(obj, 'b', { writable: false }); // reconfigure
+sleep();
+Object.setPrototypeOf(obj, {}); // setPrototype
+sleep();
+Object.seal(obj); // preventExtensions 
+</pre>
+
+</body>
+</html>
